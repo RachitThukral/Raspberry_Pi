@@ -155,7 +155,7 @@ void Lp55231::Begin()
 		return;
 	}
 	
-	int addr = 0x32;          //<<<<<The I2C address of the slave
+	int addr = _address;          //<<<<<The I2C address of the slave
 	if (ioctl(file_i2c, I2C_SLAVE, addr) < 0)
 	{
 		printf("Failed to acquire bus access and/or talk to slave.\n");
@@ -163,7 +163,7 @@ void Lp55231::Begin()
 		return;
 	}
 
-  Reset();
+  //Reset();
 }
 
 void Lp55231::Enable()
@@ -172,7 +172,7 @@ void Lp55231::Enable()
   WriteReg(REG_CNTRL1, 0x40 );
 
   // enable internal clock & charge pump & write auto increment
-  WriteReg(REG_MISC, 0x53);
+  WriteReg(REG_MISC, 0x4B);
 }
 
 void Lp55231::Disable()

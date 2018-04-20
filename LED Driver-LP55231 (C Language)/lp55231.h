@@ -36,7 +36,7 @@ Distributed as-is; no warranty is given.
 class Lp55231
 {
 public:
-  Lp55231(uint8_t address = 0x32);
+  Lp55231(uint8_t address=0x32);
 
   // values for dimensioning and input validation
   static const uint8_t NumChannels = 9;
@@ -90,7 +90,7 @@ protected:
 class Lp55231Engines: public Lp55231
 {
 public:
-  Lp55231Engines(uint8_t address = 0x32): Lp55231(address)
+  Lp55231Engines(uint8_t address=0x32): Lp55231(address)
   { };
 
   lp_err_code SetRatiometricDimming(uint8_t channel, bool value);
