@@ -96,6 +96,6 @@ class Luxmeter:
 
 while True:
 	oLuxmeter = Luxmeter()
-	print "Light intensity in term of LUX ",  oLuxmeter.getLux(1)
+	print "Light intensity = ",  oLuxmeter.getLux(1)
 	print "====================================================================="
 	time.sleep(.1)

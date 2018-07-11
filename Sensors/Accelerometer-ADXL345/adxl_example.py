@@ -1,14 +1,7 @@
-# ADXL345 Python example 
-#
-# author:  Jonathan Williamson
-# license: BSD, see LICENSE.txt included in this package
-# 
-# This is an example to show you how to use our ADXL345 Python library
-# http://shop.pimoroni.com/products/adafruit-triple-axis-accelerometer
-import time
-from adxl345 import ADXL345
+import time		#import libraries
+import adxl345
   
-adxl345 = ADXL345()
+adxl345 = adxl345.ADXL345()
 while True:
     
 	axes = adxl345.getAxes(True)
